@@ -578,6 +578,101 @@ button {
 }
 
 /* ==========================================================================
+   About Section
+   ========================================================================== */
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.about-bio p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-size: var(--text-md);
+  margin-block-end: var(--space-md);
+}
+
+.about-bio strong {
+  color: var(--text-primary);
+}
+
+.about-quick-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-block-start: var(--space-lg);
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.about-quick-info div {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.about-quick-info strong {
+  color: var(--accent-primary);
+  display: inline-block;
+  min-width: 120px;
+}
+
+.about-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.pillar-card {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  padding: var(--space-md);
+}
+
+.pillar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid rgba(255, 71, 87, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.pillar-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.pillar-info h3 {
+  font-size: var(--text-md);
+  color: var(--text-primary);
+  margin-block-end: var(--space-xs);
+  margin-block-start: 0;
+}
+
+.pillar-info p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+/* ==========================================================================
    Impact Section
    ========================================================================== */
 .dashboard-grid {
