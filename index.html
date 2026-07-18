@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sachin Kanyal | Frontend Platform Engineer</title>
+  <meta name="description" content="Portfolio of Sachin Kanyal, a Frontend Platform Engineer specializing in high-performance web platforms, React, and React Native.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Custom Cursor Elements -->
+  <div id="cd"></div>
+  <div id="cr"></div>
+  <div id="sp"></div>
+  
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo" aria-label="Home">SK</a>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-bg">
+        <canvas id="hc"></canvas>
+      </div>
+      <div class="container hero-content reveal">
+        <p class="greeting stagger-1">Hello, I'm</p>
+        <h1 class="name stagger-2">Sachin Kanyal</h1>
+        <h2 class="title stagger-3"><span class="typing-text">Frontend Platform Engineer</span><span class="cursor"></span></h2>
+        <p class="subtitle stagger-4">
+          I architect high-performance web platforms, optimize build systems, and ship production-grade React & React Native applications at scale.<br>
+          <span class="serif-italic">Builder. Performance Architect. Platform Engineer.</span>
+        </p>
+        <div class="hero-cta stagger-5">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="https://drive.google.com/file/d/1SMc5jQ3k0H695_tmWVhhk6_6yhpr8V_C/view" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Resume</a>
+        </div>
+        <div class="hero-socials stagger-6">
+          <a href="https://github.com/15Sachin2000" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sachin-kanyal-15b636218/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="mailto:2000sachinkanyal@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Dashboard Section -->
+    <section id="impact" class="impact section reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Engineering Impact</h2>
+          <p class="section-subtitle">Numbers that tell the story</p>
+        </header>
+        <div class="dashboard-grid">
+          <div class="metric-card glass-card">
+            <div class="metric-value"><span class="count-up" data-target="95">0</span><span class="metric-suffix">%</span></div>
+            <h3 class="metric-title">CI/CD Runtime Reduction</h3>
+            <p class="metric-desc">4h 40m &rarr; 12 minutes</p>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-value"><span class="count-up" data-target="75">0</span><span class="metric-suffix">%</span></div>
+            <h3 class="metric-title">Build & tsc Speedup</h3>
+            <p class="metric-desc">TypeScript Composite Mode</p>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-value"><span class="count-up" data-target="56">0</span><span class="metric-suffix">&nbsp;FPS</span></div>
+            <h3 class="metric-title">Mobile JS Performance</h3>
+            <p class="metric-desc">Up from 26.7 FPS</p>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-value"><span class="count-up" data-target="6100">0</span><span class="metric-suffix">+</span></div>
+            <h3 class="metric-title">Files Restructured</h3>
+            <p class="metric-desc">Monorepo Architecture</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="experience section reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Career Journey</h2>
+        </header>
+        <div class="timeline">
+          
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>Software Engineer II</h3>
+                <span class="timeline-date">July 2024 – Present</span>
+              </div>
+              <h4 class="timeline-company">Synaptic (vy-labs)</h4>
+              <p class="company-context">B2B fintech platform for institutional investors</p>
+              <ul class="timeline-bullets">
+                <li>Drove CI/CD and build pipeline overhaul (lint caching, Vite v8, dependency reuse), reducing check times by 95% (4h 40m to 12m) and parallel jobs from 39 to 3.</li>
+                <li>Led platform-wide Information Architecture redesign to single-tab navigation across 10+ core views.</li>
+                <li>Architected a config-driven screener platform for People and Company data, enabling instant rollouts without code redeployments.</li>
+                <li>Restructured monorepo build architecture (6,100+ files) to TypeScript Composite Mode, reducing build and tsc check times by 75%.</li>
+                <li>Owned the React Native mobile app lifecycle — upgraded RN to 0.77.3, optimized filter performance (JS FPS from 26.7 to 56).</li>
+                <li>Built end-to-end full-stack flows for trycanonical using Python/FastAPI and Jinja templates.</li>
+                <li>Mentored 2 frontend interns through onboarding and reviews, leading to their conversion to full-time engineers.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>Software Engineer I</h3>
+                <span class="timeline-date">July 2023 – June 2024</span>
+              </div>
+              <h4 class="timeline-company">Synaptic (vy-labs)</h4>
+              <ul class="timeline-bullets">
+                <li>Led the Vite migration, cutting build times by 50% and bundle sizes by 30%; reduced tuxedo load times by 90% (146KB to 11KB) via tree-shaking.</li>
+                <li>Co-built the company's React Native mobile app from scratch in a 3-developer team.</li>
+                <li>Co-developed tuxedo-v2, the in-house design system; shipped Figma-to-production features.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>Software Engineering Intern</h3>
+                <span class="timeline-date">Jan 2023 – June 2023</span>
+              </div>
+              <h4 class="timeline-company">Synaptic (vy-labs)</h4>
+              <ul class="timeline-bullets">
+                <li>Implemented client-side event tracking for analytics and onboarded new datasources.</li>
+                <li>Resolved bugs across Web, Chrome Extension, and Admin products.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills section reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Technical Arsenal</h2>
+          <p class="section-subtitle font-playfair">Expertise across the frontend & platform engineering stack</p>
+        </header>
+      </div>
+      <div class="belt-wrap" style="margin-top:2rem;"><div class="belt belt-ltr" id="b1"></div></div>
+      <div class="belt-wrap" style="margin-top:1rem;"><div class="belt belt-rtl" id="b2"></div></div>
+      <div class="belt-wrap" style="margin-top:1rem;"><div class="belt belt-ltr" id="b3"></div></div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects section reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Featured Builds</h2>
+          <p class="section-subtitle font-playfair">Real-time collaboration tools & platform experiments</p>
+        </header>
+        
+        <div class="projects-grid">
+          
+          <div class="proj-card glass-card">
+            <div class="proj-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18L22 12L16 6"></path><path d="M8 6L2 12L8 18"></path></svg>
+            </div>
+            <div class="proj-header">
+              <h3>Code 200</h3>
+              <span class="proj-status status-experiment">Featured Experiment</span>
+            </div>
+            <p class="proj-subtitle">Real-time Collaborative Code Editor & WebRTC calling</p>
+            <p class="proj-desc">
+              A full-stack collaborative environment that allows multiple developers to edit code simultaneously. Integrates peer-to-peer audio/video streaming via WebRTC (PeerJS), syntax highlighting for multiple programming languages using CodeMirror, and real-time room chats.
+            </p>
+            <div class="proj-tech">
+              <span class="stk">Node.js</span>
+              <span class="stk">Express</span>
+              <span class="stk">Socket.io</span>
+              <span class="stk">PeerJS</span>
+              <span class="stk">CodeMirror</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/15Sachin2000" target="_blank" rel="noopener noreferrer" class="plink">GitHub Profile</a>
+            </div>
+          </div>
+
+          <div class="proj-card glass-card">
+            <div class="proj-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="proj-header">
+              <h3>tuxedo-v2 Playground</h3>
+              <span class="proj-status status-tool">Platform Tooling</span>
+            </div>
+            <p class="proj-subtitle">Interactive Design System Benchmark & Sandbox</p>
+            <p class="proj-desc">
+              An interactive sandbox environment built to document and benchmark Synaptic's proprietary design system (tuxedo-v2). It provides a playground to audit component performance and tree-shaking efficacy, which guided optimization efforts that successfully reduced target bundle sizes by 90% (from 146KB to 11KB).
+            </p>
+            <div class="proj-tech">
+              <span class="stk">React</span>
+              <span class="stk">TypeScript</span>
+              <span class="stk">Storybook</span>
+              <span class="stk">CSS Custom Properties</span>
+              <span class="stk">Vite</span>
+            </div>
+            <div class="proj-links">
+              <span class="plink plink-disabled">Internal System</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Achievements Section -->
+    <section id="achievements" class="achievements section reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Education & Achievements</h2>
+        </header>
+        <div class="achievements-grid">
+          
+          <div class="edu-card glass-card">
+            <header class="card-header">
+              <h2>Education & Academics</h2>
+            </header>
+            <div class="edu-content">
+              <div class="edu-item">
+                <h3>IIIT Allahabad</h3>
+                <p class="edu-degree">B.Tech in Electronics and Communication Engineering</p>
+                <p class="edu-meta">2019 - 2023 &bull; CGPA 8.56</p>
+              </div>
+              <div class="edu-item academic-highlight">
+                <h4>JEE Mains 2019</h4>
+                <p>Secured <strong>99.14 percentile</strong> out of 1.2M+ candidates</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="achievement-card glass-card highlight-card">
+            <header class="card-header">
+              <h2>Competitive Programming</h2>
+            </header>
+            <div class="leetcode-stats">
+              <div class="stats-badges">
+                <span class="lc-badge">Leetcode Knight</span>
+                <span class="gfg-badge">GFG Institute Rank 1</span>
+              </div>
+              <ul class="lc-details">
+                <li><strong>Max Contest Rating:</strong> 1923 (LeetCode)</li>
+                <li><strong>Global Rank 484:</strong> LeetCode Biweekly 78</li>
+                <li><strong>Global Rank 648:</strong> LeetCode Weekly 297</li>
+                <li><strong>1,000+ Problems Solved</strong> across coding platforms</li>
+              </ul>
+              <div class="profile-links">
+                <a href="https://leetcode.com/15Sachin2000" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm-link">LeetCode</a>
+                <a href="https://www.geeksforgeeks.org/profile/unknownhandle" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm-link">GeeksForGeeks</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="leadership-card glass-card">
+            <header class="card-header">
+              <h2>Leadership & Roles</h2>
+            </header>
+            <div class="leadership-content">
+              <div class="leadership-item">
+                <h3>PRAYAAS (IIIT Allahabad)</h3>
+                <p class="role-title">Senior Member</p>
+                <p class="role-desc">Active contributor in a non-profit student organization dedicated to teaching and mentoring underprivileged children in local communities.</p>
+              </div>
+              <div class="leadership-item">
+                <h3>College Sports Society</h3>
+                <p class="role-title">Active Member</p>
+                <p class="role-desc">Organized inter-college tournaments and managed logistics/coordination for sports activities.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section reveal">
+      <div class="container">
+        <header class="section-header">
+          <h2>Let's Connect</h2>
+          <p class="section-subtitle">I'm always open to discussing new opportunities, interesting projects, or just having a good tech conversation.</p>
+        </header>
+        <div class="contact-layout">
+          
+          <form class="contact-form glass-card" aria-label="Contact form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Get your free access key from https://web3forms.com/ -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="subject" value="New Portfolio Message from SachinKanyal.com">
+            <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display: none;">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+          </form>
+
+          <aside class="contact-sidebar">
+            <div class="contact-info-item glass-card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="info-content">
+                <h4>Email</h4>
+                <a href="mailto:2000sachinkanyal@gmail.com">2000sachinkanyal@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-info-item glass-card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="info-content">
+                <h4>Phone</h4>
+                <a href="tel:+916397659318">+91 639 765 9318</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item glass-card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-content">
+                <h4>Location</h4>
+                <p>Gurugram, India</p>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-socials">
+        <a href="https://github.com/15Sachin2000" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/sachin-kanyal-15b636218/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="mailto:2000sachinkanyal@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2026 Sachin Kanyal. All rights reserved.</p>
+      <p class="tagline">Built with ❤️ by Sachin Kanyal</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
