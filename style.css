@@ -314,7 +314,7 @@ button {
 .btn-secondary:hover {
   border-color: var(--accent-primary);
   color: var(--accent-primary);
-  background: rgba(56, 189, 248, 0.05);
+  background: rgba(255, 71, 87, 0.05);
 }
 
 /* ==========================================================================
