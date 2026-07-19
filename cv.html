@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sachin Kanyal — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text-dark: #1a1a1a;
+      --text-body: #333;
+      --text-muted: #666;
+      --text-light: #888;
+      --accent: #c0392b;
+      --accent-light: #e74c3c;
+      --border: #e0e0e0;
+      --bg-tag: #f5f5f5;
+      --page-w: 210mm;
+      --page-min-h: 297mm;
+    }
+
+    html { font-size: 10.5px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-body);
+      line-height: 1.55;
+      background: #e8e8e8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page Container ── */
+    .page {
+      width: var(--page-w);
+      min-height: var(--page-min-h);
+      margin: 20px auto;
+      padding: 36px 40px 32px;
+      background: #fff;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+    }
+
+    /* ── Header ── */
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 14px;
+      border-bottom: 2.5px solid var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .cv-header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .cv-header .role {
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .cv-header .tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .contact-col {
+      text-align: right;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      flex-shrink: 0;
+    }
+
+    .contact-col a {
+      color: var(--text-body);
+      text-decoration: none;
+    }
+
+    .contact-col a:hover { color: var(--accent); }
+
+    .contact-col .label {
+      display: inline-block;
+      min-width: 58px;
+      text-align: left;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Sections ── */
+    .section { margin-bottom: 14px; }
+
+    .section-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* ── Experience ── */
+    .exp-entry { margin-bottom: 12px; }
+    .exp-entry:last-child { margin-bottom: 0; }
+
+    .exp-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .exp-role {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .exp-date {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 500;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    .exp-company {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .exp-context {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.5;
+    }
+
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+      font-size: 0.85rem;
+    }
+
+    /* ── Projects ── */
+    .proj-entry { margin-bottom: 10px; }
+    .proj-entry:last-child { margin-bottom: 0; }
+
+    .proj-name {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    .proj-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(192, 57, 43, 0.08);
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .proj-stack {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-top: 1px;
+    }
+
+    .proj-desc {
+      font-size: 0.92rem;
+      margin-top: 2px;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      row-gap: 6px;
+      column-gap: 12px;
+    }
+
+    .skill-category {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .skill-list {
+      font-size: 0.9rem;
+      color: var(--text-body);
+    }
+
+    /* ── Education ── */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-school {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    .edu-date {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .edu-degree {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .edu-meta {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    /* ── Achievements ── */
+    .ach-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ach-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+      font-size: 0.92rem;
+    }
+
+    .ach-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+      font-size: 0.85rem;
+    }
+
+    .ach-list strong {
+      color: var(--text-dark);
+    }
+
+    /* ── Print Styles ── */
+    @media print {
+      html { font-size: 10.5px; }
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        padding: 28px 32px 24px;
+        box-shadow: none;
+        width: 100%;
+        min-height: auto;
+      }
+      a { color: var(--text-body) !important; }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="cv-header">
+      <div>
+        <h1>Sachin Kanyal</h1>
+        <div class="role">Software Engineer II · Frontend Platform</div>
+        <div class="tagline">Build tooling, performance, React & React Native</div>
+      </div>
+      <div class="contact-col">
+        <div><span class="label">Email</span> <a href="mailto:2000sachinkanyal@gmail.com">2000sachinkanyal@gmail.com</a></div>
+        <div><span class="label">Phone</span> <a href="tel:+916397659318">+91 639 765 9318</a></div>
+        <div><span class="label">GitHub</span> <a href="https://github.com/15Sachin2000">github.com/15Sachin2000</a></div>
+        <div><span class="label">LinkedIn</span> <a href="https://www.linkedin.com/in/sachin-kanyal-15b636218/">linkedin.com/in/sachin-kanyal</a></div>
+        <div><span class="label">Location</span> Gurugram, India</div>
+      </div>
+    </header>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="exp-entry">
+        <div class="exp-row">
+          <span class="exp-role">Software Engineer II</span>
+          <span class="exp-date">Jul 2024 – Present</span>
+        </div>
+        <div class="exp-company">Synaptic (vy-labs)</div>
+        <div class="exp-context">B2B fintech platform for institutional investors</div>
+        <ul class="exp-bullets">
+          <li>Drove CI/CD and build pipeline overhaul (lint caching, Vite v8, dependency reuse), reducing check times by 95% (4h 40m → 12m) and parallel jobs from 39 to 3.</li>
+          <li>Led platform-wide Information Architecture redesign to single-tab navigation across 10+ core views, streamlining explore, screener, settings, and notification workflows.</li>
+          <li>Architected a highly configurable Screener platform with backend-driven filters, dynamic columns, and persistent views, enabling instant data rollouts without code redeployments.</li>
+          <li>Restructured monorepo build architecture (6,100+ files) to TypeScript Composite Mode, reducing build and tsc check times by 75% and delivering core Analytics, List, and Sharing modules.</li>
+          <li>Owned the React Native mobile app lifecycle — upgraded RN to 0.77.3, optimized filter performance (JS thread from 26.7 to 56 FPS), and resolved app security compliance.</li>
+          <li>Standardized JSON API contracts and guidelines between frontend and backend teams.</li>
+          <li>Built end-to-end full-stack flows for Synaptic's trycanonical product using Python/FastAPI and Jinja templates.</li>
+          <li>Mentored 2 frontend interns through onboarding and code reviews, leading to their conversion to full-time engineers.</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-row">
+          <span class="exp-role">Software Engineer I</span>
+          <span class="exp-date">Jul 2023 – Jun 2024</span>
+        </div>
+        <div class="exp-company">Synaptic (vy-labs)</div>
+        <ul class="exp-bullets">
+          <li>Migrated the core platform bundler from Webpack to Vite, cutting development build startup times by 50% and production bundle sizes by 30% through ES Module (ESM) adoption.</li>
+          <li>Optimized legacy Webpack configuration, reducing initial bundle load times by 60% through chunking, route-based code splitting, and strategic caching.</li>
+          <li>Co-built the company's React Native mobile app from scratch in a 3-developer team.</li>
+          <li>Co-developed the tuxedo-v2 design system, authoring reusable components and reducing library load times by 90% (146KB to 11KB) via tree-shaking.</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-row">
+          <span class="exp-role">Software Engineering Intern</span>
+          <span class="exp-date">Jan 2023 – Jun 2023</span>
+        </div>
+        <div class="exp-company">Synaptic (vy-labs)</div>
+        <ul class="exp-bullets">
+          <li>Implemented client-side event tracking for analytics and onboarded new alternative datasources with end-to-end UI rendering.</li>
+          <li>Resolved bugs and shipped responsive pages from Figma with REST API integrations across Web, Chrome Extension, and Admin products.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="proj-entry">
+        <div>
+          <span class="proj-name">tuxedo-v2</span>
+          <span class="proj-label">Internal</span>
+        </div>
+        <div class="proj-stack">React · TypeScript · Storybook · Webpack / Vite · Tree-Shaking</div>
+        <p class="proj-desc">Shared component library used across the platform. Built reusable components shipped by other teams, documented in Storybook for design review. Owned the build configuration — set up tree-shaking and migrated the bundler, reducing bundle from 146KB to 11KB.</p>
+      </div>
+
+      <div class="proj-entry">
+        <div>
+          <span class="proj-name">Code 200</span>
+          <span class="proj-label">Side Project</span>
+        </div>
+        <div class="proj-stack">Node.js · Express · Socket.io · PeerJS · CodeMirror</div>
+        <p class="proj-desc">Real-time collaborative code editor with WebRTC video calling and live chat. Multiple users edit code simultaneously with syntax highlighting via CodeMirror and syncing through Socket.io.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <span class="skill-category">Languages</span>
+        <span class="skill-list">TypeScript, JavaScript (ES6+), Python, HTML5, CSS3 / SCSS, SQL, C++</span>
+
+        <span class="skill-category">Frontend</span>
+        <span class="skill-list">React, Redux, React Native, Immutable.js, Storybook, AG-Grid</span>
+
+        <span class="skill-category">Build & DevOps</span>
+        <span class="skill-list">Vite, Webpack, GitHub Actions CI/CD, Sentry, Performance Optimization, Design Systems</span>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-row">
+        <span class="edu-school">Indian Institute of Information Technology, Allahabad</span>
+        <span class="edu-date">2019 – 2023</span>
+      </div>
+      <div class="edu-degree">B.Tech in Electronics and Communication Engineering</div>
+      <div class="edu-meta">CGPA: 8.56 · JEE Mains 2019: 99.14 percentile (1.2M+ candidates)</div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section">
+      <h2 class="section-title">Achievements</h2>
+      <ul class="ach-list">
+        <li><strong>LeetCode Knight</strong> — Max contest rating 1923, Global Rank 484 (Biweekly 78), Global Rank 648 (Weekly 297)</li>
+        <li><strong>GeeksForGeeks Institute Rank 1</strong> — 1,000+ problems solved across coding platforms</li>
+        <li><strong>PRAYAAS, IIIT Allahabad</strong> — Senior Member, taught and mentored kids from underserved communities</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
