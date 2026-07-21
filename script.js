@@ -213,9 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ====================================================================
      7. Dynamic Skills Marquee Belts
      ==================================================================== */
-  const languages = ['TypeScript', 'JavaScript (ES6+)', 'Python', 'HTML5', 'CSS3 / SCSS', 'SQL', 'C++'];
-  const frontendMobile = ['React', 'Redux', 'React Native', 'Immutable.js', 'Storybook', 'AG-Grid'];
-  const buildDevOpsPlatform = ['Vite', 'Webpack', 'GitHub Actions CI / CD', 'Sentry', 'Performance Optimization', 'Design Systems', 'Mobile Engineering'];
+  const languages = ['TypeScript', 'JavaScript (ES6+)', 'Python', 'SQL', 'HTML5', 'CSS3 / SCSS', 'C++'];
+  const frontendMobile = ['React', 'React Native', 'Redux', 'Zustand', 'React Query', 'Tailwind CSS', 'Storybook', 'AG-Grid', 'Design Systems'];
+  const buildDevOpsPlatform = ['Git', 'Vite', 'Webpack', 'Yarn Workspaces', 'FastAPI', 'REST APIs', 'Jinja', 'GitHub Actions CI / CD', 'PostHog', 'Amplitude', 'Sentry', 'Performance Optimization'];
 
   const makeBelt = (id, items) => {
     const el = document.getElementById(id);
